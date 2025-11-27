@@ -10,3 +10,62 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+html,
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body {
+    display: block;
+}
+
+.bar-con {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 8px 16px !important;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    color: #000 !important;
+    letter-spacing: 4px;
+}
+
+a {
+    padding: 8px 16px;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+b {
+    font-weight: bolder;
+}
+
+.indent {
+  display: inline-block;
+  margin-left: 40px; /* Adjust for desired indent */
+}
+
+.nav-btns {
+    float: right !important;
+    cursor: pointer;
+}
+
+.bar-btn:hover {
+    background-color: #f0f0f0e4 !important;
+    padding: 12px;
+    border-radius: 10px;
+    color: #000 !important;
+}
