@@ -325,3 +325,22 @@ h1 .other-name {
 #slide12:checked ~ .navigation label[for="slide12"] {
   background-color: #444;
 }
+
+.section-subheading,
+.section-paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.8;
+  color: #333;
+}
+
+.section-subheading {
+  padding: 10px;
+}
+
+#last {
+  margin-bottom: 50px;
+}
