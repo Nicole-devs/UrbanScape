@@ -104,6 +104,7 @@ b {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
     margin: 10px 0;
 }
 
@@ -343,4 +344,49 @@ h1 .other-name {
 
 #last {
   margin-bottom: 50px;
+}
+
+.contact-section {
+  max-width: 95%;
+  margin-left: 15px;
+  margin-bottom: 70px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.contact-header {
+  font-size: 2em;
+}
+
+.contact-subheading {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.custom-input {
+  display: block;
+  width: 100%;
+  padding: 16px 12px;
+  margin: 16px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  letter-spacing: 2px;
+}
+
+.custom-input:focus {
+  border-color: #4CAF50;
+  outline: none;            /* remove default outline */
+}
+
+.submit-Btn {
+  position: absolute;
+  left: 40%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 2px;
 }
