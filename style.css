@@ -326,6 +326,10 @@ h1 .other-name {
   background-color: #444;
 }
 
+.section-title {
+  background-color: hsla(175, 81%, 20%, 0.688);
+}
+
 .section-subheading,
 .section-paragraph {
   max-width: 800px;
