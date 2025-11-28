@@ -165,15 +165,18 @@
                     <hr>
                     <p class="contact-subheading">Lets get in touch and talk about your next project.</p>
 
-                    <form netlify name="urbanscape-contact-form" method="POST" data-netlify="true" class="contact-form" netlify-honeypot="bot-field">
+                    <form action="/.netlify/functions/send-form-email" method="POST" class="contact-form">
                         <!-- Honeypot field for spam protection -->
-                        <p class="hidden">
-                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                        </p>
+                        <input type="text"
+                        name="bot-field"
+                        style="display: none !important; visibility: hidden !important; opacity: 0; position: absolute; left: -9999px;"
+                        tabindex="-1"
+                        autocomplete="off" />
 
-                        <input type="hidden" name="form-name" value="urbanscape-contact-form" />
+                        <!-- Hidden website embedded in form -->
                         <input type="hidden" name="website" id="websiteField">
 
+                        <!-- Regular Fields -->
                         <div class="form-input">
                             <input id="name-field" class="custom-input" type="text" placeholder="Name" required name="name">
                             <input class="custom-input" type="email" placeholder="Email" required name="email">
