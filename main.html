@@ -9,7 +9,7 @@
     </head>
     <body>
         <!-- Navbar -->
-         <div class="bar-con">
+        <div class="bar-con">
             <div class="navbar">
                 <a href="#home" class="bar-item"><b>UrbanScape</b><br>
                     <span class="indent">Architects</span></a>
@@ -20,10 +20,10 @@
                     <a href="#Contact" class="bar-item bar-btn">Contact</a>
                 </div>
             </div>
-         </div>
+        </div>
 
         <!-- Header -->
-        <header class="display-con">
+        <header class="display-con" id="home">
             <img src="/images/front.jpg" alt="Architecture" class="landing-img">
             <div class="display-text">
                 <h1 class="landing-name">
@@ -32,5 +32,109 @@
                 </h1>
             </div>
         </header>
+
+        <!-- Page Content -->
+        <article>
+            <!-- Project Section -->
+            <section class="projects-section" id="Projects">
+                <h3 class="section-title">Projects</h3>
+
+                <!-- Display projects in a slideshow -->
+                <div class="slideshow-con">
+                    <div class="residential-slideshow">
+                        <h4 class="top-label">Residential Designs</h4>
+                        <input type="radio" name="residential-slides" id="slide1" checked>
+                        <input type="radio" name="residential-slides" id="slide2">
+                        <input type="radio" name="residential-slides" id="slide3">
+                        <input type="radio" name="residential-slides" id="slide4">
+                        <input type="radio" name="residential-slides" id="slide5">
+                        <input type="radio" name="residential-slides" id="slide6">
+
+                        <div class="slides">
+                            <div class="slide" id="s1">
+                                <img src="images/maisonettes.jpg" alt="Maisonette">
+                                <div class="slide-label">Maisonette</div>
+                            </div>
+                            <div class="slide" id="s2">
+                                <img src="images/living.jpg" alt="Living">
+                                <div class="slide-label">Living Room</div>
+                            </div>
+                            <div class="slide" id="s3">
+                                <img src="images/kitchen.jpg" alt="Kitchen">
+                                <div class="slide-label">Kitchen</div>
+                            </div>
+                            <div class="slide" id="s4">
+                                <img src="images/apartments.jpg" alt="Apartments">
+                                <div class="slide-label">Apartments</div>
+                            </div>
+                            <div class="slide" id="s5">
+                                <img src="images/bathroom.jpg" alt="Bathroom">
+                                <div class="slide-label">Bathroom</div>
+                            </div>
+                            <div class="slide" id="s6">
+                                <img src="images/bungalow.jpg" alt="Bungalow">
+                                <div class="slide-label">Bungalow</div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <label for="slide1" class="nav-dot"></label>
+                            <label for="slide2" class="nav-dot"></label>
+                            <label for="slide3" class="nav-dot"></label>
+                            <label for="slide4" class="nav-dot"></label>
+                            <label for="slide5" class="nav-dot"></label>
+                            <label for="slide6" class="nav-dot"></label>
+                        </div>
+                    </div>
+
+                    <div class="commercial-slideshow">
+                        <h4 class="top-label">Commercial Buildings</h4>
+
+                        <input type="radio" name="commercial-slides" id="slide7" checked>
+                        <input type="radio" name="commercial-slides" id="slide8">
+                        <input type="radio" name="commercial-slides" id="slide9">
+                        <input type="radio" name="commercial-slides" id="slide10">
+                        <input type="radio" name="commercial-slides" id="slide11">
+                        <input type="radio" name="commercial-slides" id="slide12">
+
+                        <div class="slides">
+                            <div class="slide" id="s7">
+                                <img src="images/mall.jpg" alt="Mall">
+                                <div class="slide-label">Mall</div>
+                            </div>
+                            <div class="slide" id="s8">
+                                <img src="images/office.jpg" alt="Offices">
+                                <div class="slide-label">Offices</div>
+                            </div>
+                            <div class="slide" id="s9">
+                                <img src="images/hotel.jpg" alt="Hotel">
+                                <div class="slide-label">Hotel</div>
+                            </div>
+                            <div class="slide" id="s10">
+                                <img src="images/restaurant.jpg" alt="Restaurant">
+                                <div class="slide-label">Restaurant</div>
+                            </div>
+                            <div class="slide" id="s11">
+                                <img src="images/warehouse.jpg" alt="Warehouse">
+                                <div class="slide-label">Warehouse</div>
+                            </div>
+                            <div class="slide" id="s12">
+                                <img src="images/hospital.jpg" alt="Hospital">
+                                <div class="slide-label">Hospital</div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <label for="slide7" class="nav-dot"></label>
+                            <label for="slide8" class="nav-dot"></label>
+                            <label for="slide9" class="nav-dot"></label>
+                            <label for="slide10" class="nav-dot"></label>
+                            <label for="slide11" class="nav-dot"></label>
+                            <label for="slide12" class="nav-dot"></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
     </body>
 </html>
