@@ -42,7 +42,7 @@ nameField.addEventListener('change', () => {
 
 // Form submission
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
+  
   const submitBtn = form.querySelector('button[type="submit"]');
 
   submitBtn.disabled = true;
