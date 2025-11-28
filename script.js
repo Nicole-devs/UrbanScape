@@ -32,10 +32,6 @@ function capitalizeName(value) {
 // Event listeners
 closeBtn.addEventListener('click', hideModal);
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) hideModal();
-});
-
 nameField.addEventListener('input', () => {
   nameField.value = capitalizeName(nameField.value);
 });
