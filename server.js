@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', async (req, res) => {
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message, website} = req.body;
   const userEmail = email?.toLowerCase().trim();
   if (!userEmail){
     return res.status(400).send('Email is required');
@@ -49,6 +49,7 @@ app.post('/send-email', async (req, res) => {
       <p><strong>Subject:</strong> ${subject}</p>
       <p><strong>Message:</strong></p>
       <p>${message.replace(/\n/g, '<br>')}</p>
+      <p><strong>Website:</strong> ${website || 'Unknown'}</p>
     `,
   };
 
