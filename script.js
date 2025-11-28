@@ -1,6 +1,11 @@
+// Variable Initializations
 const modal = document.getElementById('thankYouModal');
 const closeBtn = document.getElementById('closeModalBtn');
+const form = document.querySelector('form');
+const nameField = document.getElementById('name-field');
 
+
+// Modal Management Functions
 function showModal() {
   modal.classList.add('active');
   document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -14,13 +19,8 @@ function hideModal() {
 // Close modal when clicking "Thank You" button
 closeBtn.addEventListener('click', hideModal);
 
-// Close modal if clicking outside modal content
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) hideModal();
-});
 
-const form = document.querySelector('form');
-
+// Form Submission Handler
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -32,6 +32,9 @@ form.addEventListener('submit', async (e) => {
 
   try {
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    data.website = window.location.origin;
+
     const response = await fetch('/send-email', {
       method: 'POST',
       body: JSON.stringify(Object.fromEntries(formData)),
@@ -53,9 +56,8 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-// Auto-capitalize name input as user types
-const nameField = document.getElementById('name-field');
 
+// Auto-capitalize Handler Function
 function capitalizeName(value) {
   // Capitalize first letter of each word and make rest lowercase
   return value.replace(/\b\w/g, char => char.toUpperCase()).replace(/\B\w/g, char => char.toLowerCase());
