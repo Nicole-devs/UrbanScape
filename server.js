@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
+
+app.use(express.static(__dirname));
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -11,20 +14,23 @@ app.use(bodyParser.json());
 // Store timestamps of last email sent per IP
 const lastSentTimestamps = {};
 
-// Configure your transporter as before
+// Configure transporter for Gmail SMTP (v7.x style)
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
     user: 'ndevs.office@gmail.com',
     pass: 'ohupaasysfgkhbty',
   },
 });
 
-app.post('/send-email', (req, res) => {
+
+app.post('/send-email', async (req, res) => {
   const ip = req.ip || req.connection.remoteAddress;
   const now = Date.now();
 
-  // Check if user sent email less than 10 seconds ago
+  // Check rate limiting (same as before)
   if (lastSentTimestamps[ip] && now - lastSentTimestamps[ip] < 10000) {
     return res.status(429).send('Please wait 10 seconds before sending another email.');
   }
@@ -45,16 +51,18 @@ app.post('/send-email', (req, res) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-      return res.status(500).send('Error sending email');
-    }
+  try {
+    // Send email (async/await - v7.x style)
+    await transporter.sendMail(mailOptions);
+
     // Update timestamp on success
     lastSentTimestamps[ip] = now;
 
     res.send('Email sent successfully');
-  });
+  } catch (error) {
+    console.error('Email error:', error);
+    res.status(500).send('Error sending email');
+  }
 });
 
 const PORT = process.env.PORT || 5000;
