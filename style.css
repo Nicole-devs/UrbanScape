@@ -1,3 +1,4 @@
+/* General Styles */
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -33,6 +34,7 @@ body {
   min-height: 100vh;
 }
 
+/* Navbar Styles */
 .bar-con {
   position: fixed;
   z-index: 2;
@@ -65,7 +67,7 @@ b {
 
 .indent {
   display: inline-block;
-  margin-left: 40px; /* Adjust for desired indent */
+  margin-left: 40px;
 }
 
 .nav-btns {
@@ -80,6 +82,7 @@ b {
   color: #000 !important;
 }
 
+/* Header Styles */
 .display-con {
   position: relative;
   width: 100%;
@@ -125,6 +128,7 @@ h1 .other-name {
   font-weight: 400;
 }
 
+/* Projects Styles */
 .projects-section {
   max-width: 1564px;
   margin: 10px;
@@ -186,7 +190,7 @@ h1 .other-name {
 /* Slide container with flexbox */
 .slides {
   display: flex;
-  width: 100%; /* 6 slides */
+  width: 100%; 
   height: 350px;
   will-change: transform;
   transition: transform 0.5s ease-in-out;
@@ -328,6 +332,7 @@ h1 .other-name {
   background-color: #444;
 }
 
+/* About Styles */
 .about-section {
   max-width: 1564px;
   margin: 10px;
@@ -354,6 +359,7 @@ h1 .other-name {
   margin-bottom: 50px;
 }
 
+/* Contact Styles */
 .contact-section {
   max-width: 95%;
   margin-left: 15px;
@@ -399,6 +405,7 @@ h1 .other-name {
   letter-spacing: 2px;
 }
 
+/* Footer Styles */
 .footer {
   display: flex;
   justify-content: center;
