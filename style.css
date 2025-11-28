@@ -1,65 +1,66 @@
 *, *::before, *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* Hide scrollbar for all browsers */
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 
-    /* Firefox */
-    scrollbar-width: none;
-    scrollbar-color: transparent;
+  /* Firefox */
+  scrollbar-width: none;
+  scrollbar-color: transparent;
 }
 
 html {
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body {
-    display: block;
-    min-height: 100vh;
+  display: block;
+  min-height: 100vh;
 }
 
 .bar-con {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
 }
 
 .navbar {
-    display: flex;
-    width: 100%;
-    padding: 8px 16px !important;
-    overflow: hidden;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff !important;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-    color: #000 !important;
-    letter-spacing: 4px;
+  display: flex;
+  width: 100%;
+  padding: 8px 16px !important;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  color: #000 !important;
+  letter-spacing: 4px;
 }
 
 .bar-item{
-    padding: 8px 16px;
-    color: #000 !important;
-    text-decoration: none;
+  padding: 8px 16px;
+  color: #000 !important;
+  text-decoration: none;
 }
 
 b {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .indent {
@@ -68,15 +69,15 @@ b {
 }
 
 .nav-btns {
-    float: right !important;
-    cursor: pointer;
+  float: right !important;
+  cursor: pointer;
 }
 
 .bar-btn:hover {
-    background-color: #f0f0f0e4 !important;
-    padding: 12px;
-    border-radius: 10px;
-    color: #000 !important;
+  background-color: #f0f0f0e4 !important;
+  padding: 12px;
+  border-radius: 10px;
+  color: #000 !important;
 }
 
 .display-con {
@@ -93,42 +94,41 @@ b {
 }
 
 .display-text {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 4px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 4px;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 400;
-    margin: 10px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 h1 .main-name {
-    display: block;
-    color: #fff;
-    /* color: #fffffff3; */
-    font-size: 3.5em;
-    font-weight: bolder;
+  display: block;
+  color: #fff;
+  font-size: 3.5em;
+  font-weight: bolder;
 }
 
 h1 .other-name {
-    display: block;
-    margin-left: 70% !important;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: 400;
+  display: block;
+  margin-left: 70% !important;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 .projects-section {
-    max-width: 1564px;
-    margin: 10px;
-    padding: 32px 16px;
+  max-width: 1564px;
+  margin: 10px;
+  padding: 32px 16px;
 }
 
 .section-title {
@@ -198,6 +198,7 @@ h1 .other-name {
 .slide {
   position: relative;
   height: 100%;
+  margin-bottom: 50px;
   flex: 0 0 100%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -217,8 +218,7 @@ h1 .other-name {
   font-size: 16px;
   font-style: italic;
   letter-spacing: 2px;
-  text-indent: 30px
-
+  text-indent: 30px;
 }
 
 .slide-label {
@@ -273,39 +273,39 @@ h1 .other-name {
 }
 
 #slide4:checked ~ .slides {
-    transform: translateX(-300%);
+  transform: translateX(-300%);
 }
 
 #slide5:checked ~ .slides {
-    transform: translateX(-400%);
+  transform: translateX(-400%);
 }
 
 #slide6:checked ~ .slides {
-    transform: translateX(-500%);
+  transform: translateX(-500%);
 }
 
 #slide7:checked ~ .slides {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 #slide8:checked ~ .slides {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 #slide9:checked ~ .slides {
-    transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 
 #slide10:checked ~ .slides {
-    transform: translateX(-300%);
+  transform: translateX(-300%);
 }
 
 #slide11:checked ~ .slides {
-    transform: translateX(-400%);
+  transform: translateX(-400%);
 }
 
 #slide12:checked ~ .slides {
-    transform: translateX(-500%);
+  transform: translateX(-500%);
 }
 
 /* Active dot style */
@@ -328,6 +328,12 @@ h1 .other-name {
   background-color: #444;
 }
 
+.about-section {
+  max-width: 1564px;
+  margin: 10px;
+  padding: 32px 16px;
+}
+
 .section-subheading,
 .section-paragraph {
   max-width: 800px;
@@ -340,6 +346,7 @@ h1 .other-name {
 }
 
 .section-subheading {
+  font-weight: 700;
   padding: 10px;
 }
 
@@ -384,7 +391,7 @@ h1 .other-name {
 
 .submit-Btn {
   position: absolute;
-  left: 40%;
+  left: 43%;
   padding: 10px;
   border-radius: 8px;
   background-color: #000;
@@ -408,4 +415,11 @@ h1 .other-name {
 
 #github{
   color: #fff;
+}
+
+/* Ensure sections scroll to show title properly */
+.projects-section,
+.about-section,
+.contact-section {
+  scroll-margin-top: 90px;  /* Navbar height + padding */
 }
