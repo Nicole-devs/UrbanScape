@@ -15,8 +15,9 @@ html,
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
+    overflow: hidden;
 }
 
 body {
@@ -68,4 +69,49 @@ b {
     padding: 12px;
     border-radius: 10px;
     color: #000 !important;
+}
+
+.display-con {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.landing-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.display-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 10px 0;
+}
+
+h1 .main-name {
+    display: block;
+    color: #fff;
+    /* color: #fffffff3; */
+    font-size: 3.5em;
+    font-weight: bolder;
+}
+
+h1 .other-name {
+    display: block;
+    margin-left: 70% !important;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 400;
 }
