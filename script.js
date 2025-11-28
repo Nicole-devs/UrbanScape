@@ -57,6 +57,6 @@ form.addEventListener('submit', (e) => {
     form.reset();
     showModal();
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Send Message';
+    submitBtn.textContent = 'Reach Out';
   }, 1500);
 });
