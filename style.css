@@ -1,9 +1,3 @@
-html {
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -17,9 +11,16 @@ html {
     scrollbar-color: transparent;
 }
 
+html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 html,
 body {
     margin: 0;
+    padding: 0;
     font-family: Verdana, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -51,7 +52,7 @@ body {
     letter-spacing: 4px;
 }
 
-a {
+.bar-item{
     padding: 8px 16px;
     color: #000 !important;
     text-decoration: none;
@@ -389,4 +390,22 @@ h1 .other-name {
   background-color: #000;
   color: #fff;
   letter-spacing: 2px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10%;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+  background-color: hsla(175, 81%, 20%, 0.688);
+  color: #fff;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+#github{
+  color: #fff;
 }
