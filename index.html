@@ -39,6 +39,7 @@
             <article>
                 <!-- Project Section -->
                 <section class="projects-section" id="Projects">
+                    
                     <h3 class="section-title" >Projects</h3>
 
                     <!-- Projects Slideshows -->
@@ -160,23 +161,25 @@
 
                 <!-- Contact Section -->
                 <section class="contact-section" id="Contact">
-                        <h3 class="contact-header">Contact</h3>
-                        <hr>
-                        <p class="contact-subheading">Lets get in touch and talk about your next project.</p>
 
-                        <form action="/send-email" method="post" class="contact-form">
+                    <h3 class="contact-header">Contact</h3>
+                    <hr>
+                    <p class="contact-subheading">Lets get in touch and talk about your next project.</p>
 
-                            <div class="form-input">
-                                <input id="name-field" class="custom-input" type="text" placeholder="Name" required name="name">
-                                <input class="custom-input" type="email" placeholder="Email" required name="email">
-                                <input class="custom-input" type="text" placeholder="Subject" required name="subject">
-                                <textarea class="custom-input" placeholder="Message" required name="message" rows="7"></textarea>
-                            </div>
+                    <form netlify name="contact" method="POST" class="contact-form">
+                        <input type="hidden" name="website" id="websiteField">
 
-                            <button type="submit" class="submit-Btn">
-                            Reach Out
-                            </button>
-                        </form>
+                        <div class="form-input">
+                            <input id="name-field" class="custom-input" type="text" placeholder="Name" required name="name">
+                            <input class="custom-input" type="email" placeholder="Email" required name="email">
+                            <input class="custom-input" type="text" placeholder="Subject" required name="subject">
+                            <textarea class="custom-input" placeholder="Message" required name="message" rows="7"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-Btn">
+                        Reach Out
+                        </button>
+                    </form>
                 </section>
             </article>
         </main>

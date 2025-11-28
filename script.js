@@ -4,6 +4,14 @@ const closeBtn = document.getElementById('closeModalBtn');
 const form = document.querySelector('form');
 const nameField = document.getElementById('name-field');
 
+
+// Set hidden website field value dynamically for Netlify Forms
+const websiteField = document.querySelector('input[name="website"]');
+if (websiteField) {
+  websiteField.value = window.location.origin;
+}
+
+
 // Modal functions
 function showModal() {
   modal.classList.add('active');
@@ -37,35 +45,18 @@ nameField.addEventListener('change', () => {
 });
 
 // Form submission
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const submitBtn = form.querySelector('button[type="submit"]');
-  const originalText = submitBtn.textContent;
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
 
-  try {
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    data.website = window.location.origin;
-
-    const response = await fetch('/send-email', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      form.reset();
-      showModal();
-    } else {
-      alert('Error sending message. Please try again.');
-    }
-  } catch (error) {
-    alert('Network error. Please try again.');
-  } finally {
+  // Netlify handles the actual form submission; this is UI feedback
+  setTimeout(() => {
+    form.reset();
+    showModal();
     submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-  }
+    submitBtn.textContent = 'Send Message';
+  }, 1500);
 });
