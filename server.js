@@ -25,9 +25,9 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', async (req, res) => {
-  const userEmail = req.body.email?.toLowerCase().trim();
-
-  if (!userEmail) {
+  const { name, email, subject, message } = req.body;
+  const userEmail = email?.toLowerCase().trim();
+  if (!userEmail){
     return res.status(400).send('Email is required');
   }
 
@@ -37,8 +37,6 @@ app.post('/send-email', async (req, res) => {
   if (lastSentTimestamps[userEmail] && now - lastSentTimestamps[userEmail] < 10000) {
     return res.status(429).send('Please wait 10 seconds before sending another email.');
   }
-
-  const { name, email, subject, message } = req.body;
 
   const mailOptions = {
     from: `"${name}" <${userEmail}>`,

@@ -52,3 +52,21 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = originalText;
   }
 });
+
+// Auto-capitalize name input as user types
+const nameField = document.getElementById('name-field');
+
+function capitalizeName(value) {
+  // Capitalize first letter of each word and make rest lowercase
+  return value.replace(/\b\w/g, char => char.toUpperCase()).replace(/\B\w/g, char => char.toLowerCase());
+}
+
+// Handle typing input
+nameField.addEventListener('input', () => {
+  nameField.value = capitalizeName(nameField.value);
+});
+
+// Handle autofill/select events
+nameField.addEventListener('change', () => {
+  nameField.value = capitalizeName(nameField.value);
+});
