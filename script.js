@@ -36,6 +36,9 @@ nameField.addEventListener('change', () => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
 
@@ -46,7 +49,6 @@ form.addEventListener('submit', async (e) => {
     data.website = window.location.origin;
 
     const API_URL = window.location.hostname === 'localhost'
-
     ? 'http://localhost:5000/send-email'
     : 'https://architecture-portfolio-6bxb.onrender.com/send-email';
 
