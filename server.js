@@ -10,6 +10,17 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors({
+  origin: [
+    'http://127.0.0.1:5000',
+    'https://nicole-devs.github.io',
+    'https://architecture-portfolio-6bxb.onrender.com'
+  ],
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
+
 
 // Store timestamps of last email sent per IP
 const lastSentTimestamps = {};

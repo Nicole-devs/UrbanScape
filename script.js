@@ -36,11 +36,11 @@ nameField.addEventListener('change', () => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
-
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
 
 
   try {
