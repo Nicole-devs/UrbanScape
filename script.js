@@ -39,12 +39,19 @@ form.addEventListener('submit', async (e) => {
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
 
+
   try {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     data.website = window.location.origin;
 
-    const response = await fetch('/send-email', {
+    const API_URL = window.location.hostname === 'localhost'
+
+    ? 'http://localhost:5000/send-email'
+    : 'https://architecture-portfolio-6bxb.onrender.com/send-email';
+
+    const response = await fetch(API_URL, {
+
       method: 'POST',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
