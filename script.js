@@ -24,10 +24,6 @@ function capitalizeName(value) {
 // Event listeners
 closeBtn.addEventListener('click', hideModal);
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) hideModal();
-});
-
 nameField.addEventListener('input', () => {
   nameField.value = capitalizeName(nameField.value);
 });
@@ -39,11 +35,9 @@ nameField.addEventListener('change', () => {
 // Form submission
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
 
   try {
     const formData = new FormData(form);

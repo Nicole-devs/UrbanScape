@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UrbanScape Architecture</title>
 
@@ -165,7 +166,7 @@
                     <hr>
                     <p class="contact-subheading">Lets get in touch and talk about your next project.</p>
 
-                    <form action="/send-email" method="POST" class="contact-form">
+                    <form class="contact-form">
 
                         <!-- Honeypot field for spam protection -->
                         <input type="text"
@@ -174,12 +175,10 @@
                         tabindex="-1"
                         autocomplete="off" />
 
-                        <!-- Hidden website embedded in form -->
-                        <input type="hidden" name="website" id="websiteField">
-
                         <!-- Regular Fields -->
                         <div class="form-input">
-                            <input id="name-field" class="custom-input" type="text" placeholder="Name" required name="name">
+                            <input id="name-field" class="custom-input" type="text" placeholder="Full Name (First Last)" required name="name" pattern="^\s*\S+(\s+\S+)+\s*$"
+                            title="Please enter both first and last name (e.g., 'John Doe').">
                             <input class="custom-input" type="email" placeholder="Email" required name="email">
                             <input class="custom-input" type="text" placeholder="Subject" required name="subject">
                             <textarea class="custom-input" placeholder="Message" required name="message" rows="7"></textarea>
