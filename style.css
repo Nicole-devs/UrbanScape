@@ -153,7 +153,6 @@ h1 .other-name {
 .residential-slideshow, .commercial-slideshow {
   position: relative;
   max-width: 800px;
-  height: 370px;
   margin: auto;
   padding: 0;
   overflow: hidden;
