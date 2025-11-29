@@ -63,9 +63,11 @@ form.addEventListener('submit', async (e) => {
       form.reset();
       showModal();
     } else {
+      console.error('Server error:', response.status, response.statusText);
       alert('Error sending message. Please try again.');
     }
   } catch (error) {
+    console.error('Fetch error:', error);
     alert('Network error. Please try again.');
   } finally {
     submitBtn.disabled = false;
